@@ -1,21 +1,91 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a sample React front-end project to base your web project on. The corresponding back-end project can be found on this [link](https://github.com/marquise-k/africahacksweb2). Pull both into the same directory if you are working on a full stack project.
 
-## Available Scripts
+### How to Clone the Project
 
-In the project directory, you can run:
+Clone the project by running ``` git clone https://github.com/marquise-k/africahacksweb.git ``` into your terminal.
 
-### `npm start`
-
-Runs the app in the development mode.<br>
+To run the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Adding Components
+
+Components in React are easy to add and remove based on your functional requirements. The sample project has sample components but we recommend modifying them and adding/removing components based on your needs. For inspiration, explore some easy to integrate component libraries:
+
+- [MaterialUI](https://material-ui.com/)
+- [TailwindUI](https://tailwindui.com/)
+- [Visx](https://github.com/airbnb/visx) - You might want to try this one out if your idea requires data visualizations
+- [ReactBootstrap](https://react-bootstrap.github.io/)
+
+### Creating a database 
+(Ignore this section if your project does not require a database)
+
+This sample project uses a MongoDB database. Mongodb databases are non-relational hence require little upfront work or knowledge on the intended data structure. As always the more knowledge you have of your application's data needs the better. See intructions on how to install MongoDB into your local machine [here](https://docs.mongodb.com/manual/administration/install-community/)
+
+Once your Mongo database is setup, you will need knowledge of a few commands to get started.
+
+#### Adding data to your database
+
+- Run ```mongo``` into your termminal to start a database instance
+
+- If your mongo setup is done correctly you shoud see the following message appear:
+
+```
+    MongoDB shell version v4.4.1
+    connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+    Implicit session: session { "id" : UUID("58b08487-441b-4035-9404-0ca1de5c9930") }
+    MongoDB server version: 4.4.1
+    ---
+    The server generated these startup warnings when booting:
+            2020-12-02T15:24:01.679-05:00: ***** SERVER RESTARTED *****
+            2020-12-02T15:24:05.681-05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+    ---
+    ---
+            Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+            metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+            The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+            and anyone you share the URL with. MongoDB may use this information to make product
+            improvements and to suggest MongoDB products and deployment options to you.
+
+            To enable free monitoring, run the following command: db.enableFreeMonitoring()
+            To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+    ---
+```
+
+- Create a collection to begin. In mongo, your database will be made up of one or more "collections" which will hold your data. To create a collection, 
+simply type the following command into the terminal. Replace "my-collection-name" with the identifier you wish to use for your database.
+
+``` use <my-collection-name> ```
+
+- Once you've initiated and entered a collection, you should be able to run the following command to insert into your database, like below
+
+```
+db.analytics.insert([{
+... pageViews: 10,
+... repeatVisits: 10,
+... topLocation: Canada,
+... averageVisitLength: '2 mins',
+... }, {
+... pageViews: 15,
+... repearVisits: 20,
+... topLocation: China,
+... averageVisitLength: '5 mins',
+... }, {
+... pageViews: 3,
+... repreatVisits: 1,
+... topLocation: Spain,
+... averageVisitLength: '1 min'
+... }])
+```
+
+Other collection methods canbe found [here](https://docs.mongodb.com/manual/reference/method/js-collection/)
+
+#### Building the back-end
+Refer to the back-end repo for guidelines on building a back-end server which interacts with your database.
 
 ### `npm run build`
 

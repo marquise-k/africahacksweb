@@ -24,7 +24,7 @@ const articles = [
             consequat quam. Vivamus accumsan dui in facilisis aliquet.`,
         ]
     },    {
-        name: 'learn-node',
+        name: 'growth-models',
         title: 'How to Build a Node Server in 10 Minutes',
         content: [
             `In this article, we're going to be talking looking at a very quick way
@@ -48,7 +48,7 @@ const articles = [
             consequat quam. Vivamus accumsan dui in facilisis aliquet.`,
         ]
     },     {
-        name: 'my-thoughts-on-resumes',
+        name: 'career-hacking',
         title: 'My Thoughts on Resumes',
         content: [
             `Today is the day I talk about something which scares most people: resumes.

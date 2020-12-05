@@ -1,8 +1,8 @@
 import React from 'react';
 
-const CommentsList = ({ comments }) => (
+const ReviewsList = ({ comments }) => (
     <>
-    <h3>Comments:</h3>
+    <h3>Reviews:</h3>
     {comments.map((comment, key) => (
         <div className="comment" key={key}>
             <h4>{comment.username}</h4>
@@ -12,4 +12,4 @@ const CommentsList = ({ comments }) => (
     </>
 );
 
-export default CommentsList;
+export default ReviewsList;
