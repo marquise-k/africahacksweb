@@ -21,6 +21,9 @@ Components in React are easy to add and remove based on your functional requirem
 - [Visx](https://github.com/airbnb/visx) - You might want to try this one out if your idea requires data visualizations
 - [ReactBootstrap](https://react-bootstrap.github.io/)
 
+### Getting External Data
+Displaying data form different sources can be a nice way to provide information to your applications. This is the goal of APIs. Here are a list of [public apis](https://github.com/public-apis/public-apis) which you can add to your app. If you are not interested in displaying external data, a database might be better suited for your needs as you can enter the data directly into the database and then display and modify as you need from your front-end.
+
 ### Creating a database 
 (Ignore this section if your project does not require a database)
 
