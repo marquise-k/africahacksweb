@@ -1,3 +1,4 @@
+## AfricaHacks2020: Starter Web Project (Front-End)
 This is a sample React front-end project to base your web project on. The corresponding back-end project can be found on this [link](https://github.com/marquise-k/africahacksweb2). Pull both into the same directory if you are working on a full stack project.
 
 ### How to Clone the Project
@@ -96,4 +97,29 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### Preparing your app for release
+
+In the ```Public``` directory of your front-end repository, you will find app metadata like your web app favicon and title. Make sure these are updated to reflect your project before releasing. For example:
+
+In ```Public``` -> ```index.html``` , editing line 25 from 
+
+```<title>React App</title>``` to     ```<title>My Project Name</title>``` will reflect the new app page on the browser tab.
+
+In ```manifest.json```, the name and short name properties should also be updated to your reflect your new app.
+
+Not required but if you have made a logo for your app,  you can also add to this repository after using a [favicon generator](https://realfavicongenerator.net/) and replacing the ```favicon.ico``` file in the public folder by your generated ```favicon.ico```
+
+### Deployment
+Once you're front-end is ready to be connected to your backend for deployment, run ```npm run build``` in the front-end repo. This will create a `build` folder in your front-end repository. Copy this build folder into the root of your back-end repository. Then you can use the back-end repository as your 'full stack app' as it will be serving both the server files and the front-end files.
+
+An easy way to deploy a full-stack application is by using an AWS instance. To do this:
+
+- Create an [AWS Console](https://aws.amazon.com/console/) account and login to the console.
+
+- Under all services, click on 'EC2' and then launch instance
+
+- Select the top result from the list of options (Amazon Linux 2 AMI). Make sure the free tier is selected and click on "Review and Launch" then launch.
+
+- AWS will then prompt you to create a key pair which is just a private key file you will need to SSH into your server and make changes. Make sure you;ve downloaded the key pair file (.pem extension) before your proceed.
 
